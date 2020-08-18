@@ -41,3 +41,12 @@ class ArticleViewSet(viewsets.GenericViewSet, mixins.ListModelMixin, mixins.Crea
     serializer_class = ArticleSerializer
     queryset = Article.objects.all()
 """
+
+"""
+modelVeiwset
+https://www.django-rest-framework.org/api-guide/viewsets/#modelviewset 참조
+커스텀 하려면 overrider해야함
+class ArticleViewSet(viewsets.ModelViewSet):
+    serializer_class = ArticleSerializer
+    queryset = Article.objects.all()
+"""
