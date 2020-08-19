@@ -1,2 +1,2 @@
 # Django-restapi
-Django rest api server using Django rest framework
+Django rest framework로 만든 Django REST API 서버
