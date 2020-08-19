@@ -5,9 +5,14 @@ from rest_framework.response import Response
 from rest_framework import status
 from django.shortcuts import get_object_or_404
 from rest_framework import mixins
+from rest_framework.authentication import TokenAuthentication
+from rest_framework.permissions import IsAuthenticated
 
 
 class ArticleViewSet(viewsets.ViewSet):
+    authentication_classes = [TokenAuthentication]
+    permission_classes = [IsAuthenticated]
+
     def list(self, request):
         articles = Article.objects.all()
         serializer = ArticleSerializer(articles, many=True)
